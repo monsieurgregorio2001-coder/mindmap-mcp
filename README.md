@@ -122,6 +122,10 @@ The benchmark in `scripts/bench.ts` starts the real stdio server and runs a scri
 
 Built by Garfield Greg Lim III. [Portfolio](https://monsieurgregorio2001-coder.github.io/)
 
+## Development conventions
+
+Start with [local project context](docs/CONTEXT.md) and [agent instructions](AGENTS.md). Shared structure, review, and spec practices live in the [portfolio hub repository](https://github.com/monsieurgregorio2001-coder/monsieurgregorio2001-coder.github.io), under CONTRIBUTING.md and docs/portfolio/. Small fixes use a short verification record; material behavior changes use a focused spec.
+
 ## License
 
 MIT, copyright 2026 Garfield Greg Lim III.

@@ -6,3 +6,11 @@ logs
 .env
 *.log
 coverage
+
+# Local machine and generated files
+__pycache__/
+*.py[cod]
+
+# Local environment (keep example configuration versionable)
+.env.*
+!.env.example
