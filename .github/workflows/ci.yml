@@ -34,6 +34,8 @@ jobs:
           name: evidence
           path: dist/evidence.json
   demo:
+    # The receipt is built from the evidence the Node 22 test leg uploads.
+    needs: test
     runs-on: ubuntu-24.04
     env:
       HOUSE_DIR: ${{ github.workspace }}/hub
@@ -44,6 +46,10 @@ jobs:
           repository: monsieurgregorio2001-coder/monsieurgregorio2001-coder.github.io
           ref: 8938fa639a4edab03948da56d69fc0a50f7f94ae
           path: hub
+      - uses: actions/download-artifact@v4
+        with:
+          name: evidence
+          path: dist
       - uses: actions/setup-node@v4
         with:
           node-version: 22
