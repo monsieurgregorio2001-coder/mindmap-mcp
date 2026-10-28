@@ -1,0 +1,21 @@
+{
+  "name": "living-mindmap-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "The Living Mindmap room: a recorded agent session and a duplicate guard that runs in the browser. Pure modules only, no native code.",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/build.mjs",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "house:check": "node scripts/house.mjs --check"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "vite": "^5.4.21"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

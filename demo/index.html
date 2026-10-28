@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en" data-room="mindmap-mcp">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Living Mindmap · Garfield Lim</title>
+    <meta
+      name="description"
+      content="A recorded agent session on a sample map, and the duplicate guard running in your browser. Sample content. No model runs here."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="alternate" type="text/markdown" href="index.md" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237853D5'/%3E%3Ccircle cx='10' cy='16' r='4' fill='white'/%3E%3Ccircle cx='23' cy='9' r='3' fill='white'/%3E%3Ccircle cx='23' cy='23' r='3' fill='white'/%3E%3C/svg%3E"
+    />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <!-- house:boot -->
+    <script>
+      (function () {
+        var d = document.documentElement,
+          m;
+        try {
+          m = localStorage.getItem('house.motion');
+        } catch (e) {}
+        d.dataset.motion =
+          m == 'full' || m == 'calm' ? m : matchMedia('(prefers-reduced-motion:reduce)').matches ? 'calm' : 'full';
+      })();
+    </script>
+    <!-- /house:boot -->
+    <link
+      rel="preload"
+      href="/house/2.0.0/fonts/fraunces-latin-opsz-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/house/2.0.0/fonts/inter-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/house/2.0.0/tokens.css" />
+    <link rel="stylesheet" href="/house/2.0.0/house.css" />
+    <script src="/house/2.0.0/doorway.js"></script>
+    <script type="module" src="/house/2.0.0/house.js"></script>
+    <link rel="expect" href="#room-hero" blocking="render" />
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <a class="house-skip" href="#main">Skip to content</a>
+    <!-- house:crumb -->
+    <header class="house-crumb" data-house-crumb>
+      <div class="house-crumb-inner">
+        <a class="house-wordmark" href="/">Garfield Lim</a>
+        <span class="house-crumb-sep" aria-hidden="true">/</span
+        ><a class="house-crumb-room" href="/mindmap-mcp/" aria-current="page">Living Mindmap</a>
+        <span class="house-crumb-spacer"></span>
+        <nav class="house-crumb-links" aria-label="Sections">
+          <a href="/#work">Work</a><a href="/#about">About</a><a href="/#contact">Contact</a>
+        </nav>
+        <span class="house-crumb-action" data-house-action></span>
+        <a class="house-capsule is-ghost" href="mailto:lim.ggreg@outlook.com">Email</a>
+        <button
+          type="button"
+          class="house-capsule is-ghost house-menu-btn"
+          popovertarget="house-menu"
+          aria-expanded="false"
+          aria-controls="house-menu"
+        >
+          Menu
+        </button>
+        <div id="house-menu" class="house-menu" popover>
+          <p class="house-menu-h" id="house-menu-rooms">Rooms</p>
+          <ul aria-labelledby="house-menu-rooms">
+            <li><a href="/paperlab/">PaperLab</a></li>
+            <li><a href="/mindmap-mcp/">Living Mindmap</a></li>
+            <li><a href="/slop-editorial/">Slop Editorial</a></li>
+            <li><a href="/paluwagan/">Online Paluwagan</a></li>
+          </ul>
+          <p class="house-menu-h" id="house-menu-pages">The house</p>
+          <ul aria-labelledby="house-menu-pages">
+            <li><a href="/#work">Work</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+          <p class="house-menu-h" id="house-menu-out">Elsewhere</p>
+          <ul aria-labelledby="house-menu-out">
+            <li><a href="https://www.linkedin.com/in/garfield-lim-8239242a9">LinkedIn</a></li>
+            <li><a href="https://github.com/monsieurgregorio2001-coder">GitHub</a></li>
+          </ul>
+          <p class="house-menu-h" id="house-menu-set">Settings</p>
+          <ul aria-labelledby="house-menu-set">
+            <li>
+              <button type="button" data-house-calm aria-pressed="false">
+                Calm motion <span class="house-switch-state" data-state>Off</span>
+              </button>
+            </li>
+            <li><a href="/index.md" data-house-plain>Plain text</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- /house:crumb -->
+    <main id="main" class="room">
+      <section id="room-hero" class="hero" aria-labelledby="room-h1">
+        <div class="hero-text">
+          <p class="house-label hero-label">Recorded demo · Sample content · No model runs here</p>
+          <h1 id="room-h1">Living Mindmap</h1>
+          <p class="lede">
+            People and an agent edit one map. Every agent edit is marked, and near-duplicates are refused.
+          </p>
+        </div>
+        <svg class="poster" viewBox="0 0 220 120" width="220" height="120" aria-hidden="true" focusable="false">
+          <path
+            d="M44 60C70 60 70 28 100 28M44 60C70 60 70 92 100 92M148 28C168 28 168 60 188 60"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            opacity=".5"
+          />
+          <rect
+            x="6"
+            y="44"
+            width="62"
+            height="32"
+            rx="8"
+            fill="var(--h-surface)"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+          <rect
+            x="86"
+            y="12"
+            width="62"
+            height="32"
+            rx="8"
+            fill="var(--room-wash)"
+            stroke="var(--room)"
+            stroke-width="2"
+            stroke-dasharray="6 4"
+          />
+          <rect
+            x="86"
+            y="76"
+            width="62"
+            height="32"
+            rx="8"
+            fill="var(--h-surface)"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+          <rect
+            x="170"
+            y="44"
+            width="44"
+            height="32"
+            rx="8"
+            fill="var(--room-wash)"
+            stroke="var(--room)"
+            stroke-width="2"
+            stroke-dasharray="6 4"
+          />
+        </svg>
+      </section>
+
+      <div id="app" class="stage">
+        <section id="toy" class="toy card" aria-labelledby="toy-h">
+          <h2 id="toy-h">Ask the guard</h2>
+          <div class="nojs">
+            <!--static:toy-example-->
+          </div>
+          <div class="live">
+            <p class="toy-lede">
+              Type a title for a new node. The real similarity check runs on every keystroke, in your browser.
+            </p>
+            <form id="guard-form" novalidate>
+              <label for="guard-in">Title for a new node</label>
+              <input
+                id="guard-in"
+                type="text"
+                autocomplete="off"
+                autocapitalize="off"
+                spellcheck="false"
+                maxlength="120"
+                aria-describedby="guard-out guard-follow"
+              />
+              <div class="row">
+                <button type="submit" class="house-capsule is-filled">Add it</button>
+                <button type="button" class="house-capsule is-ghost" id="guard-reset">Reset the map</button>
+              </div>
+            </form>
+            <p id="guard-out" class="verdict" data-state="empty">
+              Type a title. The guard says how close it is to the nodes already in the map.
+            </p>
+            <p id="guard-follow" class="follow"></p>
+            <p id="guard-announce" class="sr-only" role="status"></p>
+            <ul id="guard-cands" class="cands"></ul>
+            <div id="guard-result" class="result" role="status"></div>
+            <div class="tries" role="group" aria-label="Titles to try">
+              <span class="tries-l">Try</span>
+              <button type="button" class="house-capsule is-ghost" data-try="Help-centre articles">
+                Help-centre articles
+              </button>
+              <button type="button" class="house-capsule is-ghost" data-try="Style and tone guide">
+                Style and tone guide
+              </button>
+              <button type="button" class="house-capsule is-ghost" data-try="Saved replies">Saved replies</button>
+            </div>
+            <p class="fixed">The guard compares words, not meaning.</p>
+            <hr />
+            <h3 id="line-h">Move the line</h3>
+            <p class="toy-lede">
+              Sixty title pairs, each labelled duplicate or different. Slide the refusal line and see which verdicts
+              flip.
+            </p>
+            <div class="slider">
+              <label for="line">Refusal line <output id="line-out" for="line">0.85</output></label>
+              <input id="line" type="range" min="0.5" max="0.99" step="0.01" value="0.85" aria-describedby="line-sum" />
+            </div>
+            <p id="line-sum" class="line-sum" role="status"></p>
+            <ul id="flips" class="flips"></ul>
+            <details class="house-drawer pairs-drawer">
+              <summary>All 60 labelled pairs</summary>
+              <div class="house-drawer-body" id="pairs-table"></div>
+            </details>
+            <p class="note">Labels drafted by Claude Code. Garfield has not reviewed them yet.</p>
+          </div>
+        </section>
+
+        <section id="map" class="map" aria-labelledby="map-h">
+          <div class="map-head">
+            <div>
+              <h2 id="map-h">Planning a support-inbox assistant</h2>
+              <p class="sample">Sample content. Not a real project.</p>
+            </div>
+            <button type="button" class="house-capsule is-filled live" id="replay">Replay the agent</button>
+          </div>
+          <ul class="legend" aria-label="Legend">
+            <li>
+              <span class="chip chip-hand"><span aria-hidden="true">●</span> Hand</span> written by a person
+            </li>
+            <li>
+              <span class="chip chip-agent"><span aria-hidden="true">◆</span> Agent · tool</span> added through MCP
+            </li>
+          </ul>
+          <div id="graph" class="graph" aria-hidden="true" style="--ratio: <!--static: graph-ratio-->"></div>
+          <div class="outline-wrap">
+            <h3 class="outline-h">Outline of the same map</h3>
+            <div id="outline"><!--static:outline--></div>
+          </div>
+        </section>
+
+        <div id="feed-slot" class="feed-slot">
+          <section id="feed" class="feed card live" aria-labelledby="feed-h">
+            <h2 id="feed-h">Hand and agent</h2>
+            <p class="note" role="status">Loading the recording…</p>
+          </section>
+        </div>
+        <div class="nojs feed-nojs card">
+          <h2>Hand and agent</h2>
+          <!--static:feed-nojs-->
+        </div>
+      </div>
+
+      <dialog id="sheet" class="sheet" aria-label="Replay the agent">
+        <div class="sheet-bar">
+          <span class="sheet-grip" aria-hidden="true"></span
+          ><button type="button" class="house-capsule is-ghost" id="sheet-close">Close</button>
+        </div>
+        <div id="sheet-body" class="sheet-body"></div>
+      </dialog>
+
+      <!--static:receipt-->
+      <!--static:how-->
+    </main>
+    <!-- house:footer -->
+    <footer class="house-footer" data-house-footer>
+      <div class="house-footer-inner">
+        <ul class="house-footer-links">
+          <li><a href="/changelog/">House 2.0.0</a></li>
+          <li><a href="/colophon/">Colophon</a></li>
+          <li><a href="/llms.txt">llms.txt</a></li>
+          <li><a href="/index.md" data-house-plain>Plain text</a></li>
+        </ul>
+        <div>
+          <button type="button" class="house-switch" data-house-calm aria-pressed="false">
+            <span class="house-switch-track" aria-hidden="true"><span class="house-switch-thumb"></span></span>
+            <span>Calm motion</span> <span class="house-switch-state" data-state>Off</span>
+          </button>
+        </div>
+        <details class="house-drawer" data-house-receipts data-house-version="2.0.0">
+          <summary>Live receipts</summary>
+          <div class="house-drawer-body">
+            <dl class="house-live">
+              <div>
+                <dt>Bytes transferred</dt>
+                <dd data-r="bytes">not reported by this browser</dd>
+              </div>
+              <div>
+                <dt>Largest paint</dt>
+                <dd data-r="lcp">not reported by this browser</dd>
+              </div>
+              <div>
+                <dt>Layout shift</dt>
+                <dd data-r="cls">not reported by this browser</dd>
+              </div>
+              <div>
+                <dt>Slowest interaction</dt>
+                <dd data-r="inp">not reported by this browser</dd>
+              </div>
+              <div>
+                <dt>House version</dt>
+                <dd data-r="version" data-r-ok>2.0.0</dd>
+              </div>
+              <div>
+                <dt>Commit</dt>
+                <dd data-r="commit">not reported by this page</dd>
+              </div>
+              <div>
+                <dt>Build date</dt>
+                <dd data-r="built">not reported by this page</dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <p class="house-footer-meta">Measured in your browser. Nothing is stored or sent.</p>
+      </div>
+    </footer>
+    <!-- /house:footer -->
+  </body>
+</html>
