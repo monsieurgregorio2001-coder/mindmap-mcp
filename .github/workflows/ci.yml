@@ -55,5 +55,10 @@ jobs:
         working-directory: demo
       - run: npm run house:check
         working-directory: demo
-      - run: npm run build
+      - name: Build the demo
         working-directory: demo
+        shell: bash
+        run: |
+          set -o pipefail
+          # Last lines go to an annotation, so a failure can be read through the API.
+          npm run build 2>&1 | tee build.log || { tail -n 15 build.log | tr '\n' ' ' | sed 's/^/::error title=demo build::/'; echo; exit 1; }
