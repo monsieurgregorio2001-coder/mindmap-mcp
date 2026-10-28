@@ -19,6 +19,8 @@
     "e2e": "node scripts/e2e.mjs",
     "verify:mcp": "tsx scripts/verify-mcp.ts",
     "bench": "tsx scripts/bench.ts",
+    "evidence": "tsx scripts/evidence.ts",
+    "evidence:check": "tsx scripts/check-evidence.ts",
     "screenshot": "node scripts/screenshot.mjs"
   },
   "dependencies": {
