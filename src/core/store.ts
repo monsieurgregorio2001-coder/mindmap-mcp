@@ -12,7 +12,7 @@ import {
   type SourceCreate,
   type SourceUpdate,
 } from './schemas.js';
-import { findSimilar, isDuplicate } from './similar.js';
+import { duplicateDetails, duplicateMessage, findSimilar, isDuplicate } from './similar.js';
 import {
   MindmapError,
   type DeletedSnapshot,
@@ -214,12 +214,7 @@ export class Store {
     if (opts.rejectDuplicates) {
       const dupes = this.similarNodes(mapId, input.title).filter(isDuplicate);
       if (dupes.length) {
-        throw new MindmapError(
-          'possible_duplicate',
-          `A node like "${input.title}" already exists: ${dupes.map((d) => `"${d.node.title}" (${d.node.id})`).join(', ')}. ` +
-            `Update or connect to it instead, or pass allow_duplicate=true if it is genuinely different.`,
-          dupes.map((d) => ({ id: d.node.id, title: d.node.title, summary: d.node.summary, score: d.score })),
-        );
+        throw new MindmapError('possible_duplicate', duplicateMessage(input.title, dupes), duplicateDetails(dupes));
       }
     }
     if (input.parent_id) {

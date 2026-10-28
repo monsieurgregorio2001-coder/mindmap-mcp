@@ -67,3 +67,14 @@ export function findSimilar(nodes: MindNode[], title: string, excludeId?: string
 }
 
 export const isDuplicate = (s: SimilarNode): boolean => s.score >= DUPLICATE_THRESHOLD;
+
+/** The refusal text for a create_node that matches existing titles. Shared by the server and the browser demo. */
+export function duplicateMessage(title: string, dupes: SimilarNode[]): string {
+  return (
+    `A node like "${title}" already exists: ${dupes.map((d) => `"${d.node.title}" (${d.node.id})`).join(', ')}. ` +
+    `Update or connect to it instead, or pass allow_duplicate=true if it is genuinely different.`
+  );
+}
+
+export const duplicateDetails = (dupes: SimilarNode[]) =>
+  dupes.map((d) => ({ id: d.node.id, title: d.node.title, summary: d.node.summary, score: d.score }));
