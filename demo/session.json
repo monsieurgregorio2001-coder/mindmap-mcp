@@ -1,0 +1,685 @@
+{
+  "schema": 1,
+  "kind": "scripted",
+  "client": { "name": "mindmap-demo-recorder", "version": "1.0.0" },
+  "server": { "name": "living-mindmap", "tools": 12, "command": "tsx src/mcp/index.ts", "transport": "stdio" },
+  "recorded_on": "2026-10-28",
+  "frames": { "sent": 13, "received": 12 },
+  "map": { "id": "m_91097c7568", "title": "Planning a support-inbox assistant" },
+  "nodes": [
+    {
+      "id": "n_dc48792dff",
+      "title": "Support-inbox assistant",
+      "summary": "An assistant that drafts replies to customer email for a person to review.",
+      "by": "hand",
+      "parent": null,
+      "step": null
+    },
+    {
+      "id": "n_4c530b7fa4",
+      "title": "Goals and scope",
+      "summary": "Who it helps and what counts as done.",
+      "by": "hand",
+      "parent": "n_dc48792dff",
+      "step": null
+    },
+    {
+      "id": "n_87b7063658",
+      "title": "Response-time target",
+      "summary": "How fast a first reply should arrive.",
+      "by": "hand",
+      "parent": "n_4c530b7fa4",
+      "step": null
+    },
+    {
+      "id": "n_9a4e01e0f4",
+      "title": "Ticket triage",
+      "summary": "Sort each message before anyone drafts.",
+      "by": "hand",
+      "parent": "n_dc48792dff",
+      "step": null
+    },
+    {
+      "id": "n_d0e63735e4",
+      "title": "What it must not do",
+      "summary": "Refunds, legal advice, and anything a person must decide.",
+      "by": "hand",
+      "parent": "n_4c530b7fa4",
+      "step": null
+    },
+    {
+      "id": "n_3c8823b6e6",
+      "title": "Escalation to a person",
+      "summary": "When the assistant stops and hands over.",
+      "by": "hand",
+      "parent": "n_9a4e01e0f4",
+      "step": null
+    },
+    {
+      "id": "n_c350ac5f47",
+      "title": "Categories and priority",
+      "summary": "A short list of ticket types and an urgency order.",
+      "by": "hand",
+      "parent": "n_9a4e01e0f4",
+      "step": null
+    },
+    {
+      "id": "n_09d8089cdb",
+      "title": "Tone and style guide",
+      "summary": "How replies should sound.",
+      "by": "hand",
+      "parent": "n_32411a723d",
+      "step": null
+    },
+    {
+      "id": "n_32411a723d",
+      "title": "Drafting replies",
+      "summary": "Turn a ticket and the help center into a first draft.",
+      "by": "hand",
+      "parent": "n_dc48792dff",
+      "step": null
+    },
+    {
+      "id": "n_4e89b362d8",
+      "title": "Knowledge base",
+      "summary": "What the drafts may quote.",
+      "by": "hand",
+      "parent": "n_dc48792dff",
+      "step": null
+    },
+    {
+      "id": "n_a2f612266a",
+      "title": "Canned answers",
+      "summary": "Approved text for common questions.",
+      "by": "hand",
+      "parent": "n_32411a723d",
+      "step": null
+    },
+    {
+      "id": "n_38f83bf8e8",
+      "title": "Help-center articles",
+      "summary": "Public pages the assistant can cite.",
+      "by": "hand",
+      "parent": "n_4e89b362d8",
+      "step": null
+    },
+    {
+      "id": "n_b73c719139",
+      "title": "Past resolved tickets",
+      "summary": "Earlier answers that worked.",
+      "by": "hand",
+      "parent": "n_4e89b362d8",
+      "step": null
+    },
+    {
+      "id": "n_e0bbdc75d7",
+      "title": "Measuring quality",
+      "summary": "How the team knows drafts are good.",
+      "by": "hand",
+      "parent": "n_dc48792dff",
+      "step": null
+    },
+    {
+      "id": "n_53659d3927",
+      "title": "Reviewer feedback",
+      "summary": "Accept, edit, or reject, with a reason.",
+      "by": "hand",
+      "parent": "n_e0bbdc75d7",
+      "step": null
+    },
+    {
+      "id": "n_b795d6cc80",
+      "title": "Reply approval queue",
+      "summary": "Drafts wait here until a person approves or edits them.",
+      "by": "agent",
+      "parent": "n_32411a723d",
+      "step": 5
+    },
+    {
+      "id": "n_13685fce54",
+      "title": "Handoff summary",
+      "summary": "What the person sees when the assistant steps back.",
+      "by": "agent",
+      "parent": "n_3c8823b6e6",
+      "step": 6
+    },
+    {
+      "id": "n_e57bbae40b",
+      "title": "Draft acceptance rate",
+      "summary": "Share of drafts a reviewer sends with no edits.",
+      "by": "agent",
+      "parent": "n_e0bbdc75d7",
+      "step": 9
+    }
+  ],
+  "edges": [
+    { "id": "e_3e3c601dc6", "from": "n_4c530b7fa4", "to": "n_87b7063658", "label": "", "by": "hand", "step": null },
+    { "id": "e_dfd9b26c19", "from": "n_dc48792dff", "to": "n_4c530b7fa4", "label": "", "by": "hand", "step": null },
+    { "id": "e_c3581518e4", "from": "n_4c530b7fa4", "to": "n_d0e63735e4", "label": "", "by": "hand", "step": null },
+    { "id": "e_403b815fc2", "from": "n_9a4e01e0f4", "to": "n_c350ac5f47", "label": "", "by": "hand", "step": null },
+    { "id": "e_aee6381a0d", "from": "n_dc48792dff", "to": "n_9a4e01e0f4", "label": "", "by": "hand", "step": null },
+    { "id": "e_4d757ecfe4", "from": "n_dc48792dff", "to": "n_32411a723d", "label": "", "by": "hand", "step": null },
+    { "id": "e_5e7d160d4d", "from": "n_9a4e01e0f4", "to": "n_3c8823b6e6", "label": "", "by": "hand", "step": null },
+    { "id": "e_02bd8cafdf", "from": "n_32411a723d", "to": "n_09d8089cdb", "label": "", "by": "hand", "step": null },
+    { "id": "e_3568d868bb", "from": "n_32411a723d", "to": "n_a2f612266a", "label": "", "by": "hand", "step": null },
+    { "id": "e_385e7b76c1", "from": "n_dc48792dff", "to": "n_4e89b362d8", "label": "", "by": "hand", "step": null },
+    { "id": "e_36f4c13235", "from": "n_4e89b362d8", "to": "n_38f83bf8e8", "label": "", "by": "hand", "step": null },
+    { "id": "e_5a810ffe09", "from": "n_dc48792dff", "to": "n_e0bbdc75d7", "label": "", "by": "hand", "step": null },
+    { "id": "e_ff649cec11", "from": "n_4e89b362d8", "to": "n_b73c719139", "label": "", "by": "hand", "step": null },
+    { "id": "e_1ba35cd891", "from": "n_e0bbdc75d7", "to": "n_53659d3927", "label": "", "by": "hand", "step": null },
+    {
+      "id": "e_b62393f267",
+      "from": "n_32411a723d",
+      "to": "n_b795d6cc80",
+      "label": "leads to",
+      "by": "agent",
+      "step": null
+    },
+    {
+      "id": "e_5ad51395aa",
+      "from": "n_3c8823b6e6",
+      "to": "n_13685fce54",
+      "label": "produces",
+      "by": "agent",
+      "step": null
+    },
+    {
+      "id": "e_373bba80a3",
+      "from": "n_e0bbdc75d7",
+      "to": "n_e57bbae40b",
+      "label": "tracked by",
+      "by": "agent",
+      "step": null
+    },
+    { "id": "e_f729f8ba71", "from": "n_53659d3927", "to": "n_09d8089cdb", "label": "tunes", "by": "agent", "step": 10 }
+  ],
+  "touched": { "n_38f83bf8e8": 8 },
+  "layout": {
+    "n_87b7063658": { "x": 392, "y": 0 },
+    "n_d0e63735e4": { "x": 392, "y": 56 },
+    "n_4c530b7fa4": { "x": 196, "y": 28 },
+    "n_c350ac5f47": { "x": 392, "y": 112 },
+    "n_13685fce54": { "x": 588, "y": 168 },
+    "n_3c8823b6e6": { "x": 392, "y": 168 },
+    "n_9a4e01e0f4": { "x": 196, "y": 140 },
+    "n_09d8089cdb": { "x": 392, "y": 224 },
+    "n_a2f612266a": { "x": 392, "y": 280 },
+    "n_b795d6cc80": { "x": 392, "y": 336 },
+    "n_32411a723d": { "x": 196, "y": 280 },
+    "n_38f83bf8e8": { "x": 392, "y": 392 },
+    "n_b73c719139": { "x": 392, "y": 448 },
+    "ghost": { "x": 392, "y": 504 },
+    "n_4e89b362d8": { "x": 196, "y": 448 },
+    "n_53659d3927": { "x": 392, "y": 560 },
+    "n_e57bbae40b": { "x": 392, "y": 616 },
+    "n_e0bbdc75d7": { "x": 196, "y": 588 },
+    "n_dc48792dff": { "x": 0, "y": 308 }
+  },
+  "ghost": { "parent": "n_4e89b362d8", "twin": "n_38f83bf8e8", "x": 392, "y": 504 },
+  "calls": [
+    {
+      "n": 1,
+      "tool": "list_maps",
+      "note": "Find out which maps exist.",
+      "args": {},
+      "is_error": false,
+      "result": {
+        "maps": [
+          {
+            "id": "m_91097c7568",
+            "title": "Planning a support-inbox assistant",
+            "description": "SAMPLE CONTENT: a made-up planning map, not a real project.",
+            "node_count": 15,
+            "archived": false
+          }
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "tool": "get_map",
+      "note": "Read the whole map before adding anything.",
+      "args": { "map": "Planning a support-inbox assistant" },
+      "is_error": false,
+      "result": {
+        "map": {
+          "id": "m_91097c7568",
+          "title": "Planning a support-inbox assistant",
+          "description": "SAMPLE CONTENT: a made-up planning map, not a real project."
+        },
+        "nodes": [
+          {
+            "id": "n_dc48792dff",
+            "title": "Support-inbox assistant",
+            "summary": "An assistant that drafts replies to customer email for a person to review.",
+            "tags": ["sample"],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "id": "n_4c530b7fa4",
+            "title": "Goals and scope",
+            "summary": "Who it helps and what counts as done.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "id": "n_87b7063658",
+            "title": "Response-time target",
+            "summary": "How fast a first reply should arrive.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "id": "n_9a4e01e0f4",
+            "title": "Ticket triage",
+            "summary": "Sort each message before anyone drafts.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "id": "n_d0e63735e4",
+            "title": "What it must not do",
+            "summary": "Refunds, legal advice, and anything a person must decide.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "id": "n_3c8823b6e6",
+            "title": "Escalation to a person",
+            "summary": "When the assistant stops and hands over.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "id": "n_c350ac5f47",
+            "title": "Categories and priority",
+            "summary": "A short list of ticket types and an urgency order.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "id": "n_09d8089cdb",
+            "title": "Tone and style guide",
+            "summary": "How replies should sound.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "id": "n_32411a723d",
+            "title": "Drafting replies",
+            "summary": "Turn a ticket and the help center into a first draft.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "id": "n_4e89b362d8",
+            "title": "Knowledge base",
+            "summary": "What the drafts may quote.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "id": "n_a2f612266a",
+            "title": "Canned answers",
+            "summary": "Approved text for common questions.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "id": "n_38f83bf8e8",
+            "title": "Help-center articles",
+            "summary": "Public pages the assistant can cite.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "id": "n_b73c719139",
+            "title": "Past resolved tickets",
+            "summary": "Earlier answers that worked.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "id": "n_e0bbdc75d7",
+            "title": "Measuring quality",
+            "summary": "How the team knows drafts are good.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "id": "n_53659d3927",
+            "title": "Reviewer feedback",
+            "summary": "Accept, edit, or reject, with a reason.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          }
+        ],
+        "edges": [
+          { "id": "e_3e3c601dc6", "from": "n_4c530b7fa4", "to": "n_87b7063658", "label": "" },
+          { "id": "e_dfd9b26c19", "from": "n_dc48792dff", "to": "n_4c530b7fa4", "label": "" },
+          { "id": "e_c3581518e4", "from": "n_4c530b7fa4", "to": "n_d0e63735e4", "label": "" },
+          { "id": "e_403b815fc2", "from": "n_9a4e01e0f4", "to": "n_c350ac5f47", "label": "" },
+          { "id": "e_aee6381a0d", "from": "n_dc48792dff", "to": "n_9a4e01e0f4", "label": "" },
+          { "id": "e_4d757ecfe4", "from": "n_dc48792dff", "to": "n_32411a723d", "label": "" },
+          { "id": "e_5e7d160d4d", "from": "n_9a4e01e0f4", "to": "n_3c8823b6e6", "label": "" },
+          { "id": "e_02bd8cafdf", "from": "n_32411a723d", "to": "n_09d8089cdb", "label": "" },
+          { "id": "e_3568d868bb", "from": "n_32411a723d", "to": "n_a2f612266a", "label": "" },
+          { "id": "e_385e7b76c1", "from": "n_dc48792dff", "to": "n_4e89b362d8", "label": "" },
+          { "id": "e_36f4c13235", "from": "n_4e89b362d8", "to": "n_38f83bf8e8", "label": "" },
+          { "id": "e_5a810ffe09", "from": "n_dc48792dff", "to": "n_e0bbdc75d7", "label": "" },
+          { "id": "e_ff649cec11", "from": "n_4e89b362d8", "to": "n_b73c719139", "label": "" },
+          { "id": "e_1ba35cd891", "from": "n_e0bbdc75d7", "to": "n_53659d3927", "label": "" }
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "tool": "search_nodes",
+      "note": "Check whether review is already covered.",
+      "args": { "query": "review", "map": "Planning a support-inbox assistant" },
+      "is_error": false,
+      "result": {
+        "results": [
+          {
+            "id": "n_53659d3927",
+            "title": "Reviewer feedback",
+            "summary": "Accept, edit, or reject, with a reason.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false,
+            "map_id": "m_91097c7568",
+            "map_title": "Planning a support-inbox assistant",
+            "matched": ["title"],
+            "snippet": "Accept, edit, or reject, with a reason."
+          },
+          {
+            "id": "n_dc48792dff",
+            "title": "Support-inbox assistant",
+            "summary": "An assistant that drafts replies to customer email for a person to review.",
+            "tags": ["sample"],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false,
+            "map_id": "m_91097c7568",
+            "map_title": "Planning a support-inbox assistant",
+            "matched": ["summary"],
+            "snippet": "…plies to customer email for a person to review."
+          }
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "tool": "get_node",
+      "note": "Look at the drafting branch up close.",
+      "args": { "node_id": "n_32411a723d" },
+      "is_error": false,
+      "result": {
+        "node": {
+          "id": "n_32411a723d",
+          "title": "Drafting replies",
+          "summary": "Turn a ticket and the help center into a first draft.",
+          "tags": [],
+          "status": "seed",
+          "provenance": "user",
+          "open_questions": [],
+          "notes": ""
+        },
+        "parents": [
+          {
+            "edge_id": "e_4d757ecfe4",
+            "label": "",
+            "id": "n_dc48792dff",
+            "title": "Support-inbox assistant",
+            "summary": "An assistant that drafts replies to customer email for a person to review.",
+            "tags": ["sample"],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          }
+        ],
+        "children": [
+          {
+            "edge_id": "e_02bd8cafdf",
+            "label": "",
+            "id": "n_09d8089cdb",
+            "title": "Tone and style guide",
+            "summary": "How replies should sound.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          },
+          {
+            "edge_id": "e_3568d868bb",
+            "label": "",
+            "id": "n_a2f612266a",
+            "title": "Canned answers",
+            "summary": "Approved text for common questions.",
+            "tags": [],
+            "status": "seed",
+            "provenance": "user",
+            "open_questions": [],
+            "has_notes": false
+          }
+        ],
+        "sources": []
+      }
+    },
+    {
+      "n": 5,
+      "tool": "create_node",
+      "note": "Drafts need a place to wait for a person.",
+      "args": {
+        "parent_id": "n_32411a723d",
+        "title": "Reply approval queue",
+        "summary": "Drafts wait here until a person approves or edits them.",
+        "relationship": "leads to"
+      },
+      "is_error": false,
+      "result": {
+        "created": true,
+        "node": {
+          "id": "n_b795d6cc80",
+          "title": "Reply approval queue",
+          "summary": "Drafts wait here until a person approves or edits them.",
+          "tags": [],
+          "status": "seed",
+          "provenance": "ai",
+          "open_questions": [],
+          "has_notes": false
+        },
+        "edge": {
+          "id": "e_b62393f267",
+          "map_id": "m_91097c7568",
+          "source_node_id": "n_32411a723d",
+          "target_node_id": "n_b795d6cc80",
+          "label": "leads to",
+          "provenance": "ai"
+        }
+      }
+    },
+    {
+      "n": 6,
+      "tool": "create_node",
+      "note": "Escalation needs a handover note.",
+      "args": {
+        "parent_id": "n_3c8823b6e6",
+        "title": "Handoff summary",
+        "summary": "What the person sees when the assistant steps back.",
+        "questions": ["Which facts must always be included?"],
+        "relationship": "produces"
+      },
+      "is_error": false,
+      "result": {
+        "created": true,
+        "node": {
+          "id": "n_13685fce54",
+          "title": "Handoff summary",
+          "summary": "What the person sees when the assistant steps back.",
+          "tags": [],
+          "status": "seed",
+          "provenance": "ai",
+          "open_questions": ["Which facts must always be included?"],
+          "has_notes": false
+        },
+        "edge": {
+          "id": "e_5ad51395aa",
+          "map_id": "m_91097c7568",
+          "source_node_id": "n_3c8823b6e6",
+          "target_node_id": "n_13685fce54",
+          "label": "produces",
+          "provenance": "ai"
+        }
+      }
+    },
+    {
+      "n": 7,
+      "tool": "create_node",
+      "note": "Add the help center under the knowledge base, with the British spelling.",
+      "args": {
+        "parent_id": "n_4e89b362d8",
+        "title": "Help-centre articles",
+        "summary": "Public pages the assistant can cite."
+      },
+      "is_error": true,
+      "result": {
+        "error": "A node like \"Help-centre articles\" already exists: \"Help-center articles\" (n_38f83bf8e8). Update or connect to it instead, or pass allow_duplicate=true if it is genuinely different.",
+        "code": "possible_duplicate",
+        "details": [
+          {
+            "id": "n_38f83bf8e8",
+            "title": "Help-center articles",
+            "summary": "Public pages the assistant can cite.",
+            "score": 0.89
+          }
+        ]
+      }
+    },
+    {
+      "n": 8,
+      "tool": "update_node",
+      "note": "The guard refused. Enrich the node that exists instead.",
+      "args": {
+        "node_id": "n_38f83bf8e8",
+        "append_notes": "Match both spellings, center and centre, when looking articles up.",
+        "add_tags": ["checked"]
+      },
+      "is_error": false,
+      "result": {
+        "updated": true,
+        "node": {
+          "id": "n_38f83bf8e8",
+          "title": "Help-center articles",
+          "summary": "Public pages the assistant can cite.",
+          "tags": ["checked"],
+          "status": "seed",
+          "provenance": "user",
+          "open_questions": [],
+          "notes": "Match both spellings, center and centre, when looking articles up."
+        }
+      }
+    },
+    {
+      "n": 9,
+      "tool": "create_node",
+      "note": "Quality needs one number a reviewer can act on.",
+      "args": {
+        "parent_id": "n_e0bbdc75d7",
+        "title": "Draft acceptance rate",
+        "summary": "Share of drafts a reviewer sends with no edits.",
+        "relationship": "tracked by"
+      },
+      "is_error": false,
+      "result": {
+        "created": true,
+        "node": {
+          "id": "n_e57bbae40b",
+          "title": "Draft acceptance rate",
+          "summary": "Share of drafts a reviewer sends with no edits.",
+          "tags": [],
+          "status": "seed",
+          "provenance": "ai",
+          "open_questions": [],
+          "has_notes": false
+        },
+        "edge": {
+          "id": "e_373bba80a3",
+          "map_id": "m_91097c7568",
+          "source_node_id": "n_e0bbdc75d7",
+          "target_node_id": "n_e57bbae40b",
+          "label": "tracked by",
+          "provenance": "ai"
+        }
+      }
+    },
+    {
+      "n": 10,
+      "tool": "create_edge",
+      "note": "Feedback should tune the tone guide.",
+      "args": { "source_node_id": "n_53659d3927", "target_node_id": "n_09d8089cdb", "label": "tunes" },
+      "is_error": false,
+      "result": {
+        "created": true,
+        "edge": {
+          "id": "e_f729f8ba71",
+          "map_id": "m_91097c7568",
+          "source_node_id": "n_53659d3927",
+          "target_node_id": "n_09d8089cdb",
+          "label": "tunes",
+          "provenance": "ai"
+        }
+      }
+    }
+  ]
+}
