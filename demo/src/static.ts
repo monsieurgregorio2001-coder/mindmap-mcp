@@ -123,7 +123,7 @@ export function receiptHtml(e: Evidence | null): string {
     evalHtml =
       `<p>${esc(g.label)}</p>` +
       `<p>${esc(g.title)}: <span class="house-fig">${g.passed} of ${g.total}</span> right at ${fmt(g.threshold)}. Precision <span class="house-fig">${num(g.precision)}</span>, recall <span class="house-fig">${num(g.recall)}</span>. ` +
-      `${esc(g.baseline.name)} baseline: precision <span class="house-fig">${num(g.baseline.precision)}</span>, recall <span class="house-fig">${num(g.baseline.recall)}</span>. <code>${esc(g.command)}</code></p>` +
+      `${esc(g.baseline.name[0].toUpperCase() + g.baseline.name.slice(1))} baseline: precision <span class="house-fig">${num(g.baseline.precision)}</span>, recall <span class="house-fig">${num(g.baseline.recall)}</span>. <code>${esc(g.command)}</code></p>` +
       `<div class="receipt-scroll" tabindex="0" role="region" aria-label="Precision and recall table"><table class="pairs"><caption class="sr-only">Guard precision and recall at each refusal line, against the exact-match baseline</caption><thead><tr><th scope="col">Line</th><th scope="col">Refused</th><th scope="col">False refusals</th><th scope="col">Duplicates missed</th><th scope="col">Precision</th><th scope="col">Recall</th></tr></thead><tbody>` +
       g.thresholds
         .map(
@@ -133,11 +133,11 @@ export function receiptHtml(e: Evidence | null): string {
         .join('') +
       `<tr><th scope="row">Exact match</th><td class="num">${g.baseline.tp + g.baseline.fp}</td><td class="num">${g.baseline.fp}</td><td class="num">${g.baseline.fn}</td><td class="num">${num(g.baseline.precision)}</td><td class="num">${num(g.baseline.recall)}</td></tr>` +
       `</tbody></table></div>` +
-      `<h4>Why ${fmt(g.threshold)}</h4><p>${fmt(g.threshold)} is <code>DUPLICATE_THRESHOLD</code> in <code>src/core/similar.ts</code>. This eval measures that line. It did not set it. ` +
+      `<h3 class="sub">Why ${fmt(g.threshold)}</h3><p>${fmt(g.threshold)} is <code>DUPLICATE_THRESHOLD</code> in <code>src/core/similar.ts</code>. This eval measures that line. It did not set it. ` +
       (g.lowest_clean
         ? `On these pairs the lowest line with no false refusal is ${fmt(g.lowest_clean.threshold)}, where recall is ${num(g.lowest_clean.recall)}. Moving the line trades a missed duplicate for a wrong refusal, and the slider above shows each pair that flips.`
         : `No line on these pairs removes every false refusal.`) +
-      `</p><h4>What it misses</h4><p>Duplicates caught, by kind: ${esc(misses)}. Wrong refusals at ${fmt(g.threshold)}: ${falseOnes}. The guard compares words, not meaning, so a synonym is a different title to it, and a title that differs by one prefix can look the same.</p>` +
+      `</p><h3 class="sub">What it misses</h3><p>Duplicates caught, by kind: ${esc(misses)}. Wrong refusals at ${fmt(g.threshold)}: ${falseOnes}. The guard compares words, not meaning, so a synonym is a different title to it, and a title that differs by one prefix can look the same.</p>` +
       `<p class="note">${esc(g.limits)}</p>`;
   }
   return (

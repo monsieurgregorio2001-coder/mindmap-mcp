@@ -114,7 +114,7 @@ export function graphSvg(m: Model, s: ViewState): string {
     ghost =
       `<foreignObject x="${g.x}" y="${g.y}" width="${BW}" height="${BH}" class="g-fo g-ghost-fo"><div class="g-node is-ghost" style="--dx:${dx}px;--dy:${dy}px">` +
       `<span class="g-chip">◆ Agent · create_node</span><span class="g-title">${esc(g.title)}</span></div></foreignObject>` +
-      `<foreignObject x="${t.x}" y="${t.y + BH + 1}" width="${BW}" height="22" class="g-fo g-score-fo"><div class="g-score">Refused · ${fmt(g.score)}</div></foreignObject>`;
+      `<foreignObject x="${t.x + BW + 8}" y="${t.y + 11}" width="120" height="22" class="g-fo g-score-fo"><div class="g-score">Refused · ${fmt(g.score)}</div></foreignObject>`;
   }
   return (
     `<svg viewBox="0 0 ${maxX} ${H}" width="${maxX}" height="${H}" focusable="false" aria-hidden="true">` +

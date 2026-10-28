@@ -10,6 +10,7 @@ The screenshot shows the bundled sample map, "Learning Transformers (sample)". A
 
 - **Problem:** Ideas from long AI conversations vanish into chat history.
 - **Build:** One SQLite store shared by a React Flow UI, a REST API, and a stdio MCP server with near-duplicate detection.
+- **Demo:** a recorded agent session and the duplicate guard run in the browser, in `demo/`. See `docs/decisions/0001-living-mindmap-room.md`.
 - **Result:** 42 tests, 0 failures across 160 real MCP calls, 0.5 ms median per call.
 
 Everything is stored in one SQLite file. There are no accounts and no cloud services.
