@@ -44,7 +44,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: monsieurgregorio2001-coder/monsieurgregorio2001-coder.github.io
-          ref: 8938fa639a4edab03948da56d69fc0a50f7f94ae
+          ref: 6b2ee826c1fc654373dd9952ba70732e923a8bbf
           path: hub
       - uses: actions/download-artifact@v4
         with:

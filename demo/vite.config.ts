@@ -86,7 +86,7 @@ function room(): Plugin {
 async function house(): Promise<Plugin> {
   const dir = process.env.HOUSE_DIR;
   if (dir) {
-    const mod = await import(path.resolve(dir, 'house/2.0.0/tools/vite-plugin.mjs'));
+    const mod = await import(path.resolve(dir, 'house/2.0.1/tools/vite-plugin.mjs'));
     return mod.default({ houseDir: dir });
   }
   return {
