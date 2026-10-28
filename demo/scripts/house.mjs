@@ -10,7 +10,7 @@ if (!dir) {
   console.error('Set HOUSE_DIR to a checkout of the hub repo.');
   process.exit(1);
 }
-const sync = path.resolve(dir, 'house/2.0.0/tools/house-sync.mjs');
+const sync = path.resolve(dir, 'house/2.0.1/tools/house-sync.mjs');
 const flag = process.argv[2];
 const args =
   flag === '--404'
