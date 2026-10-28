@@ -36,7 +36,7 @@ jobs:
   demo:
     runs-on: ubuntu-24.04
     env:
-      HOUSE_DIR: hub
+      HOUSE_DIR: ${{ github.workspace }}/hub
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4

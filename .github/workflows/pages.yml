@@ -11,7 +11,7 @@ concurrency:
   group: pages
   cancel-in-progress: false
 env:
-  HOUSE_DIR: hub
+  HOUSE_DIR: ${{ github.workspace }}/hub
 jobs:
   evidence:
     runs-on: ubuntu-24.04
