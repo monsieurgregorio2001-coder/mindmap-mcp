@@ -33,3 +33,38 @@ jobs:
         with:
           name: evidence
           path: dist/evidence.json
+  demo:
+    # The receipt is built from the evidence the Node 22 test leg uploads.
+    needs: test
+    runs-on: ubuntu-24.04
+    env:
+      HOUSE_DIR: ${{ github.workspace }}/hub
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: monsieurgregorio2001-coder/monsieurgregorio2001-coder.github.io
+          ref: 8938fa639a4edab03948da56d69fc0a50f7f94ae
+          path: hub
+      - uses: actions/download-artifact@v4
+        with:
+          name: evidence
+          path: dist
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: demo/package-lock.json
+      - run: npm ci
+        working-directory: demo
+      - run: npm run typecheck
+        working-directory: demo
+      - run: npm run house:check
+        working-directory: demo
+      - name: Build the demo
+        working-directory: demo
+        shell: bash
+        run: |
+          set -o pipefail
+          # Last lines go to an annotation, so a failure can be read through the API.
+          npm run build 2>&1 | tee build.log || { tail -n 15 build.log | tr '\n' ' ' | sed 's/^/::error title=demo build::/'; echo; exit 1; }

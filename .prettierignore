@@ -3,3 +3,4 @@ data
 node_modules
 logs
 package-lock.json
+demo/index.html

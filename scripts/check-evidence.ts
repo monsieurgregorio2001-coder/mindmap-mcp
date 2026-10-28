@@ -23,7 +23,13 @@ for (const f of arr('figures')) {
   for (const k of ['id', 'unit', 'label', 'source']) if (!isStr(f[k])) errs.push(`figures.${f.id}.${k} required`);
   if (!isNum(f.value)) errs.push(`figures.${f.id}.value must be a number`);
 }
-for (const k of ['evals', 'budgets']) arr(k);
+for (const v of arr('evals')) {
+  for (const k of ['id', 'label', 'command', 'labelled_by']) if (!isStr(v[k])) errs.push(`evals.${v.id}.${k} required`);
+  if (!isNum(v.passed) || !isNum(v.total) || (v.passed as number) > (v.total as number))
+    errs.push(`evals.${v.id} counts invalid`);
+}
+for (const b of arr('budgets'))
+  if (!isStr(b.id) || !isNum(b.limit) || !isNum(b.actual)) errs.push(`budgets.${b.id} invalid`);
 if (!Array.isArray(e.limits) || !e.limits.every(isStr)) errs.push('limits must be a string array');
 if (errs.length) {
   console.error('evidence.json shape errors:\n- ' + errs.join('\n- '));

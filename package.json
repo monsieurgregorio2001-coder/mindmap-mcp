@@ -20,6 +20,8 @@
     "verify:mcp": "tsx scripts/verify-mcp.ts",
     "bench": "tsx scripts/bench.ts",
     "evidence": "tsx scripts/evidence.ts",
+    "eval:guard": "tsx scripts/eval-guard.ts",
+    "record": "tsx scripts/record-session.ts",
     "evidence:check": "tsx scripts/check-evidence.ts",
     "screenshot": "node scripts/screenshot.mjs"
   },

@@ -1,0 +1,71 @@
+name: Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+env:
+  HOUSE_DIR: ${{ github.workspace }}/hub
+jobs:
+  evidence:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm rebuild better-sqlite3
+      - run: npm test
+      - run: npm run evidence
+      - run: npm run evidence:check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evidence
+          path: dist/evidence.json
+  build:
+    needs: evidence
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: monsieurgregorio2001-coder/monsieurgregorio2001-coder.github.io
+          ref: 8938fa639a4edab03948da56d69fc0a50f7f94ae
+          path: hub
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: demo/package-lock.json
+      - uses: actions/download-artifact@v4
+        with:
+          name: evidence
+          path: evidence
+      # The demo has its own lockfile and no native modules. The root install is not run here.
+      - run: npm ci
+        working-directory: demo
+      - run: npm run build
+        working-directory: demo
+        env:
+          EVIDENCE_FILE: ${{ github.workspace }}/evidence/evidence.json
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: demo/dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

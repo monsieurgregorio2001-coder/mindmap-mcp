@@ -8,6 +8,8 @@ Local SQLite graph shared by React Flow UI, REST API, and stdio MCP server. The 
 
 See [README](../README.md) for setup and detailed architecture.
 
+The public room lives in `demo/` (own package, no native modules). ADR: [0001](decisions/0001-living-mindmap-room.md). Visitor copy says "Living Mindmap".
+
 ## Current context
 
 The historical conversation proposed Kuru naming and an Avatar credit, but this checkpoint does not establish a user-approved rename or the exact reference. No rename implementation was made.

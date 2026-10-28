@@ -3,6 +3,7 @@ import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { guardEvalEntry } from './eval-guard.js';
 
 const run = (cmd: string, args: string[]) =>
   spawnSync(cmd, args, { encoding: 'utf8', shell: process.platform === 'win32', maxBuffer: 64e6 });
@@ -10,7 +11,17 @@ const run = (cmd: string, args: string[]) =>
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'mm-evidence-'));
 const vitestOut = path.join(tmp, 'vitest.json');
 run('npx', ['vitest', 'run', '--reporter=json', `--outputFile=${vitestOut}`]);
-const vt = JSON.parse(fs.readFileSync(vitestOut, 'utf8')) as { numPassedTests: number; numTotalTests: number };
+const vt = JSON.parse(fs.readFileSync(vitestOut, 'utf8')) as {
+  testResults: { name: string; assertionResults: { status: string }[] }[];
+};
+const count = (parity: boolean) => {
+  const rs = vt.testResults
+    .filter((f) => /demo-parity\.test\.ts$/.test(f.name) === parity)
+    .flatMap((f) => f.assertionResults);
+  return { passed: rs.filter((a) => a.status === 'passed').length, total: rs.length };
+};
+const unit = count(false);
+const parity = count(true);
 fs.rmSync(tmp, { recursive: true, force: true });
 
 const verify = run('npm', ['run', '--silent', 'verify:mcp']);
@@ -21,6 +32,15 @@ const bench = run('npm', ['run', '--silent', 'bench']);
 const m = /calls=(\d+) failures=(\d+) median=([\d.]+)ms/.exec(bench.stdout);
 
 const figures: object[] = [];
+const nodeMin = Number(/(\d+)/.exec(JSON.parse(fs.readFileSync('package.json', 'utf8')).engines?.node ?? '')?.[1] ?? 0);
+if (nodeMin)
+  figures.push({
+    id: 'node-min',
+    value: nodeMin,
+    unit: 'or newer',
+    label: 'Node major version the project needs',
+    source: 'package.json engines',
+  });
 if (toolCount > 0)
   figures.push({
     id: 'tools',
@@ -49,7 +69,14 @@ const evidence = {
     ? `GitHub Actions ${process.env.ImageOS ?? 'ubuntu'}, Node ${process.versions.node.split('.')[0]}`
     : `local ${os.platform()}, Node ${process.versions.node.split('.')[0]}`,
   tests: [
-    { id: 'unit', label: 'Unit tests', passed: vt.numPassedTests, total: vt.numTotalTests, command: 'npm test' },
+    { id: 'unit', label: 'Unit tests', passed: unit.passed, total: unit.total, command: 'npm test' },
+    {
+      id: 'parity',
+      label: 'Demo guard scores equal the server findSimilar on every fixture and labelled pair',
+      passed: parity.passed,
+      total: parity.total,
+      command: 'npx vitest run tests/demo-parity.test.ts',
+    },
     {
       id: 'verify-mcp',
       label: 'MCP server lists all 12 tools',
@@ -58,10 +85,15 @@ const evidence = {
       command: 'npm run verify:mcp',
     },
   ],
-  evals: [],
+  evals: [guardEvalEntry()],
   figures,
   budgets: [],
-  limits: ['Lexical matching only.', 'No model runs in the browser.', 'The agent session is recorded, not live.'],
+  limits: [
+    'The guard compares words, not meaning.',
+    'No model runs in the browser.',
+    "The agent session is a recording, and the agent's moves were scripted.",
+    'The guard eval labels were drafted by Claude Code and have not been reviewed by Garfield.',
+  ],
 };
 fs.mkdirSync('dist', { recursive: true });
 fs.writeFileSync('dist/evidence.json', JSON.stringify(evidence, null, 2) + '\n');

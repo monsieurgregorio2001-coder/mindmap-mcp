@@ -1,0 +1,367 @@
+{
+  "drafted_by": "Claude Code",
+  "reviewed_by_owner": false,
+  "note": "Labels drafted by Claude Code. Garfield has not reviewed them yet.",
+  "pairs": [
+    {
+      "a": "Reply template",
+      "b": "Reply templates",
+      "duplicate": true,
+      "kind": "plural"
+    },
+    {
+      "a": "Escalation rule",
+      "b": "Escalation rules",
+      "duplicate": true,
+      "kind": "plural"
+    },
+    {
+      "a": "Customer tags",
+      "b": "Customer tag",
+      "duplicate": true,
+      "kind": "plural"
+    },
+    {
+      "a": "Knowledge base article",
+      "b": "Knowledge base articles",
+      "duplicate": true,
+      "kind": "plural"
+    },
+    {
+      "a": "Canned answers",
+      "b": "Canned answer",
+      "duplicate": true,
+      "kind": "plural"
+    },
+    {
+      "a": "Ticket categories",
+      "b": "Ticket category",
+      "duplicate": true,
+      "kind": "plural"
+    },
+    {
+      "a": "Self-Attention",
+      "b": "Self Attention",
+      "duplicate": true,
+      "kind": "spelling"
+    },
+    {
+      "a": "Response-time target",
+      "b": "Response time targets",
+      "duplicate": true,
+      "kind": "spelling"
+    },
+    {
+      "a": "Tokenisation",
+      "b": "Tokenization",
+      "duplicate": true,
+      "kind": "spelling"
+    },
+    {
+      "a": "Help-center articles",
+      "b": "Help-centre articles",
+      "duplicate": true,
+      "kind": "spelling"
+    },
+    {
+      "a": "Behaviour guidelines",
+      "b": "Behavior guidelines",
+      "duplicate": true,
+      "kind": "spelling"
+    },
+    {
+      "a": "Tone and style guide",
+      "b": "Style and tone guide",
+      "duplicate": true,
+      "kind": "reorder"
+    },
+    {
+      "a": "Escalation to a person",
+      "b": "Person escalation",
+      "duplicate": true,
+      "kind": "reorder"
+    },
+    {
+      "a": "Priority and categories",
+      "b": "Categories and priority",
+      "duplicate": true,
+      "kind": "reorder"
+    },
+    {
+      "a": "Past resolved tickets",
+      "b": "Resolved past tickets",
+      "duplicate": true,
+      "kind": "reorder"
+    },
+    {
+      "a": "Draft reply review",
+      "b": "Review draft reply",
+      "duplicate": true,
+      "kind": "reorder"
+    },
+    {
+      "a": "Handoff summary",
+      "b": "Summary handoff",
+      "duplicate": true,
+      "kind": "reorder"
+    },
+    {
+      "a": "Feedback from reviewers",
+      "b": "Reviewer feedback",
+      "duplicate": true,
+      "kind": "reorder"
+    },
+    {
+      "a": "Tokenization",
+      "b": "Token splitting",
+      "duplicate": true,
+      "kind": "synonym"
+    },
+    {
+      "a": "Canned answers",
+      "b": "Saved replies",
+      "duplicate": true,
+      "kind": "synonym"
+    },
+    {
+      "a": "Escalation to a person",
+      "b": "Handoff to a human",
+      "duplicate": true,
+      "kind": "synonym"
+    },
+    {
+      "a": "Response-time target",
+      "b": "Answer speed goal",
+      "duplicate": true,
+      "kind": "synonym"
+    },
+    {
+      "a": "Reviewer feedback",
+      "b": "Rater comments",
+      "duplicate": true,
+      "kind": "synonym"
+    },
+    {
+      "a": "Help-center articles",
+      "b": "Support docs",
+      "duplicate": true,
+      "kind": "synonym"
+    },
+    {
+      "a": "Past resolved tickets",
+      "b": "Closed ticket history",
+      "duplicate": true,
+      "kind": "synonym"
+    },
+    {
+      "a": "Tone and style guide",
+      "b": "Voice guidelines",
+      "duplicate": true,
+      "kind": "synonym"
+    },
+    {
+      "a": "Ticket triage",
+      "b": "Ticket sorting",
+      "duplicate": true,
+      "kind": "synonym"
+    },
+    {
+      "a": "Knowledge base",
+      "b": "Reference library",
+      "duplicate": true,
+      "kind": "synonym"
+    },
+    {
+      "a": "Positional Encoding",
+      "b": "Word-order signal",
+      "duplicate": true,
+      "kind": "synonym"
+    },
+    {
+      "a": "Layer Normalization",
+      "b": "Layer norm",
+      "duplicate": true,
+      "kind": "synonym"
+    },
+    {
+      "a": "Self-Attention",
+      "b": "Cross-Attention",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Positional Encoding",
+      "b": "Positional Embedding",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Response-time target",
+      "b": "Response-time alert",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Escalation rules",
+      "b": "Escalation metrics",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Reply templates",
+      "b": "Reply latency",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Ticket triage",
+      "b": "Ticket archive",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Customer tags",
+      "b": "Customer segments",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Knowledge base articles",
+      "b": "Knowledge base owners",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Multi-Head Attention",
+      "b": "Multi-Query Attention",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Reviewer feedback",
+      "b": "Reviewer training",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Draft reply",
+      "b": "Draft report",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Handoff summary",
+      "b": "Handoff failure",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Rotary Embeddings",
+      "b": "Sinusoidal Embeddings",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Past resolved tickets",
+      "b": "Past open tickets",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Tone and style guide",
+      "b": "Tone and style tests",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Escalation to a person",
+      "b": "Escalation to a manager",
+      "duplicate": false,
+      "kind": "near-miss"
+    },
+    {
+      "a": "Resolved ticket",
+      "b": "Unresolved ticket",
+      "duplicate": false,
+      "kind": "opposite"
+    },
+    {
+      "a": "Safe replies",
+      "b": "Unsafe replies",
+      "duplicate": false,
+      "kind": "opposite"
+    },
+    {
+      "a": "Supervised learning",
+      "b": "Unsupervised learning",
+      "duplicate": false,
+      "kind": "opposite"
+    },
+    {
+      "a": "Allowed topics",
+      "b": "Disallowed topics",
+      "duplicate": false,
+      "kind": "opposite"
+    },
+    {
+      "a": "Overfitting",
+      "b": "Underfitting",
+      "duplicate": false,
+      "kind": "opposite"
+    },
+    {
+      "a": "Tone and style guide",
+      "b": "Past resolved tickets",
+      "duplicate": false,
+      "kind": "unrelated"
+    },
+    {
+      "a": "Causal Masking",
+      "b": "Canned answers",
+      "duplicate": false,
+      "kind": "unrelated"
+    },
+    {
+      "a": "Layer Normalization",
+      "b": "Escalation to a person",
+      "duplicate": false,
+      "kind": "unrelated"
+    },
+    {
+      "a": "Knowledge base",
+      "b": "Scaling Laws",
+      "duplicate": false,
+      "kind": "unrelated"
+    },
+    {
+      "a": "Priority and categories",
+      "b": "Feed-Forward Layer",
+      "duplicate": false,
+      "kind": "unrelated"
+    },
+    {
+      "a": "Reviewer feedback",
+      "b": "Residual Connections",
+      "duplicate": false,
+      "kind": "unrelated"
+    },
+    {
+      "a": "Handoff summary",
+      "b": "Next-Token Prediction",
+      "duplicate": false,
+      "kind": "unrelated"
+    },
+    {
+      "a": "Help-center articles",
+      "b": "Multi-Head Attention",
+      "duplicate": false,
+      "kind": "unrelated"
+    },
+    {
+      "a": "Ticket triage",
+      "b": "Rotary Embeddings",
+      "duplicate": false,
+      "kind": "unrelated"
+    }
+  ]
+}
